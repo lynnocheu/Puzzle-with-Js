@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PUZZLE</title>
+		<link rel="icon" type="image/png" href="logo.png" />
+		<meta charset="utf-8" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/puzzle.css" />
+		
+		<meta name="description" content="Simple Quiz game with Js." />
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <style> .game tr td button{background: url(img/mandela.jpg);} </style>
+	</head>
+	<body>
+		<div class="container">
+			<div class=" mt-2 d-flex align-items-center justify-content-between">
+				<button type="button" onclick="Game.Start();" class="btn-light btn-dark btn btn-sm rounded-pill" style="margin-top: 0px">⟳ Restart the game</button> 
+				<span id="counter" class="badge bg-secondary fs-6 rounded-pill float-right">Moves: <span>0</span></span>
+			</div>
+			<div class="game">
+				<table class="gametable" BORDER=0 CELLSPACING=0>
+					<tr>
+						<td data-valid='0'><button style="background-position: 0px 0px;" type="button"></button></td>
+						<td data-valid='1'><button style="background-position: var(--w1) 0px;" type="button"></button></td>
+						<td data-valid='2'><button style="background-position: var(--w2) 0px;" type="button"></button></td>
+						<td data-valid='3'><button style="background-position: var(--w3) 0px;" type="button"></button></td>
+						<td data-valid='4'><button style="background-position: var(--w4) 0px;" type="button"></button></td>
+					</tr>
+					<tr>
+						<td data-valid='5'><button style="background-position: 0px var(--w1);" type="button"></button></td>
+						<td data-valid='6'><button style="background-position: var(--w1) var(--w1);" type="button"></button></td>
+						<td data-valid='7'><button style="background-position: var(--w2) var(--w1);" type="button"></button></td>
+						<td data-valid='8'><button style="background-position: var(--w3) var(--w1);" type="button"></button></td>
+						<td data-valid='9'><button style="background-position: var(--w4) var(--w1);" type="button"></button></td>
+					</tr>
+					<tr>
+						<td data-valid='10'><button style="background-position: 0px var(--w2);" type="button"></button></td>
+						<td data-valid='11'><button style="background-position: var(--w1) var(--w2);" type="button"></button></td>
+						<td data-valid='12'><button style="background-position: var(--w2) var(--w2);" type="button"></button></td>
+						<td data-valid='13'><button style="background-position: var(--w3) var(--w2);" type="button"></button></td>
+						<td data-valid='14'><button style="background-position: var(--w4) var(--w2);" type="button"></button></td>
+					</tr>
+					<tr>
+						<td data-valid='15'><button style="background-position: 0px var(--w3);" type="button"></button></td>
+						<td data-valid='16'><button style="background-position: var(--w1) var(--w3);" type="button"></button></td>
+						<td data-valid='17'><button style="background-position: var(--w2) var(--w3);" type="button"></button></td>
+						<td data-valid='18'><button style="background-position: var(--w3) var(--w3);" type="button"></button></td>
+						<td data-valid='19'><button style="background-position: var(--w4) var(--w3);" type="button"></button></td>
+					</tr>
+					<tr>
+						<td data-valid='20'><button style="background-position: 0px var(--w4);" type="button"></button></td>
+						<td data-valid='21'><button style="background-position: var(--w1) var(--w4);" type="button"></button></td>
+						<td data-valid='22'><button style="background-position: var(--w2) var(--w4);" type="button"></button></td>
+						<td data-valid='23'><button style="background-position: var(--w3) var(--w4);" type="button"></button></td>
+						<td data-valid='24' class="pivot"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="text-center">
+				<img src="img/mandela.jpg" class="img-fluid p-4" width="180" alt="" />
+			</div>
+		</div>
+		<script>var playerDetail = { a: "Player Name", b: "xxx"};</script>
+		<script src="js/jquery-2.0.0.min.js"></script>
+		<script src="js/game.js"></script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+
+:root {
+    --width: 480px;
+    --w1: calc(( var(--width) / 5) * -1);
+    --w2: calc( ( (  var(--width) * 2 ) / 5 ) * -1 );
+    --w3: calc( ( (  var(--width) * 3 ) / 5 ) * -1 );
+    --w4: calc( ( (  var(--width) * 4 ) / 5 ) * -1 );
+}
+
+
+.font-bold{font-weight: bold;}
+
+body{font-family: sans-serif; background-color: #fff}
+.game{border-radius: 0px;outline: 8px solid #aaa;border: 0px solid #778;height: var(--width);width: var(--width);background: #fff;position: static;margin: 40px auto 0 auto; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@media (max-width: 480px) {
+    .game{height: var(--width);width: var(--width);}
+    .game tr td button{background-size: var(--width) var(--width) !important;}
+}
+
+.anime{animation: bounce 0.35s ease infinite alternate;}
+
+.game table{border: 0;width: 100%;height: 100%; background: #666;}
+.game tr td{background: transparent; border: 0;box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.5) inset;
+    width: 76px;
+    height: 76px;
+}
+
+.game tr td button{border:0;background-size: var(--width) var(--width) !important; display: block;width: 100%;height: 100%;box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.99);background-color: #fff; font-size: 30px;font-weight: bold;color: #aaa; outline: 0 !important;}
+
+.heart{animation: bounce 0.35s ease infinite alternate; cursor: pointer;transition: 0.4s transform ease-out;}
+.heart:hover, .heart:focus, .heart:active{transform: scale(1.18);}
+@keyframes bounce{
+    from {
+    	transform: translateY(10px);
+    }
+    to   {
+    	transform: translateY(-10px);
+    }
+}
